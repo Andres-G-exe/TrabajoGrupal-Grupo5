@@ -1,11 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grupo 5 | Sistema Web Institucional</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body{
+      background:#f4f7fb;
+      color:#333;
+      line-height:1.6;
+    }
+
+    header{
+      background:linear-gradient(135deg,#0d47a1,#1565c0);
+      color:white;
+      padding:20px 60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    header h1{
+      font-size:28px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:25px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#bbdefb;
+    }
+
+    .hero{
+      height:85vh;
+      background:linear-gradient(rgba(13,71,161,0.75), rgba(21,101,192,0.75)),
+      url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop') center/cover;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content{
+      max-width:800px;
+    }
+
+    .hero h2{
+      font-size:52px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:20px;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 30px;
+      background:white;
+      color:#1565c0;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#e3f2fd;
+      transform:translateY(-2px);
+    }
+
+    section{
+      padding:70px 60px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h3{
+      font-size:36px;
+      color:#1565c0;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:14px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card h4{
+      color:#1565c0;
+      margin-bottom:15px;
+      font-size:22px;
+    }
+
+    .about{
+      background:white;
+      border-radius:16px;
+      padding:40px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+      text-align:center;
+    }
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin:10px 0;
+      font-size:18px;
+    }
+
+    footer{
+      background:#0d47a1;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      nav{
+        margin-top:15px;
+      }
+
+      nav a{
+        margin:0 10px;
+      }
+
+      .hero h2{
+        font-size:38px;
+      }
+
+      section{
+        padding:50px 25px;
+      }
+    }
+  </style>
 </head>
 <body>
-    
+
+  <header>
+    <h1>Grupo 5</h1>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h2>Soluciones Tecnológicas Inteligentes</h2>
+
+      <p>
+        En Grupo 5 desarrollamos software moderno, eficiente y escalable
+        para impulsar el crecimiento digital de empresas y organizaciones.
+      </p>
+
+      <a href="#contacto" class="btn">Contáctanos</a>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <div class="section-title">
+      <h3>Nuestros Servicios</h3>
+    </div>
+
+    <div class="services">
+
+      <div class="card">
+        <h4>Desarrollo Web</h4>
+        <p>
+          Creación de páginas y sistemas web modernos adaptados a las
+          necesidades de tu empresa.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Aplicaciones Empresariales</h4>
+        <p>
+          Sistemas administrativos, ERP y plataformas de gestión
+          desarrolladas a medida.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Soporte Técnico</h4>
+        <p>
+          Mantenimiento, actualización y soporte especializado para
+          garantizar continuidad operativa.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Transformación Digital</h4>
+        <p>
+          Automatizamos procesos y optimizamos recursos mediante
+          herramientas tecnológicas innovadoras.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <div class="section-title">
+      <h3>Sobre Nosotros</h3>
+    </div>
+
+    <div class="about">
+      <p>
+        Grupo 5 es una empresa de software enfocada en brindar soluciones
+        tecnológicas modernas para pequeñas, medianas y grandes empresas.
+        Nuestro compromiso es ofrecer calidad, innovación y eficiencia
+        en cada proyecto desarrollado.
+      </p>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="section-title">
+      <h3>Contacto</h3>
+    </div>
+
+    <div class="contact">
+      <p><strong>Empresa:</strong> Grupo 5</p>
+      <p><strong>Email:</strong> contacto@grupo5.com</p>
+      <p><strong>Teléfono:</strong> +51 999 999 999</p>
+      <p><strong>Dirección:</strong> Lima, Perú</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Grupo 5 - Todos los derechos reservados</p>
+  </footer>
+
 </body>
 </html>
